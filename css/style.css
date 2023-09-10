@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* ================================== */
+
+.bmi_body {
+    width: 370px;
+    height: 280px;
+    padding: 25px 35px;
+    background: #EEEDDE;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 10px;
+}
+
+.bmi_body form h2 {
+    margin: 15px 0;
+}
+
+.bmi_body form label{
+    font-size: 12px;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(75, 73, 73);
+}
+
+.bmi_body form input {
+    margin: 3px 12px 10px 12px;
+    padding: 5px 0px 5px 0;
+    outline: 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.bmi_body form button {
+    padding: 5px 10px;
+    background: rgb(135, 235, 143);
+    color: white;
+    border: none;
+    outline: 0;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.bmi_body form .clear{
+    margin-left: 10px;
+}
+
+.bmi_body form h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+.bmi_body form .massage {
+    color: rgb(135, 235, 143);
+    font-size: 20px;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.bmi_body form .weight_error{
+    margin-top: 2px;
+}
