@@ -1,54 +1,49 @@
-let height=document.querySelector(".height")
-let weight=document.querySelector(".weight")
-let test=document.querySelector(".test")
-let height_error=document.querySelector(".height_error")
-let weight_error=document.querySelector(".weight_error")
-let result=document.querySelector(".result")
-let massage=document.querySelector(".massage")
+document.querySelector(".test").addEventListener("click", function () {
+  const heightInput = document.querySelector(".height");
+  const weightInput = document.querySelector(".weight");
+  const resultText = document.querySelector(".result");
+  const messageText = document.querySelector(".massage");
+  const heightError = document.querySelector(".height_error");
+  const weightError = document.querySelector(".weight_error");
 
+  const height = parseFloat(heightInput.value);
+  const weight = parseFloat(weightInput.value);
 
+  heightError.textContent = "";
+  weightError.textContent = "";
+  resultText.textContent = "";
+  messageText.textContent = "";
 
-test.addEventListener("click", function(){
+  if (!height || height <= 0) {
+    heightError.textContent = "Please enter a valid height.";
+    return;
+  }
 
-     if (height.value == ""){
-        height_error.innerHTML="Give a value then click"
-        height_error.style.color="red"
-     }else{
-        height_error.innerHTML=""
-     }
+  if (!weight || weight <= 0) {
+    weightError.textContent = "Please enter a valid weight.";
+    return;
+  }
 
-     if (weight.value == ""){
-        weight_error.innerHTML="Give a value then click"
-        weight_error.style.color="red"
-     }else{
-        weight_error.innerHTML=""
-     }
+  const heightInMeters = height / 100;
+  const bmi = (weight / heightInMeters ** 2).toFixed(2);
+  resultText.textContent = `Your BMI is ${bmi}`;
 
-     if (!height.value == "" && !weight.value == ""){
+  if (bmi < 18.5) {
+    messageText.textContent = "You are underweight.";
+  } else if (bmi < 24.9) {
+    messageText.textContent = "You have a normal weight.";
+  } else if (bmi < 29.9) {
+    messageText.textContent = "You are overweight.";
+  } else {
+    messageText.textContent = "You are obese.";
+  }
+});
 
-        let bmi=(((weight.value*2.20462)/ ((height.value*12) *( height.value*12)))*703)
-
-        result.innerHTML=bmi.toFixed(2)
-
-        if (bmi <= 24.9 && bmi >= 18.5){
-            massage.innerHTML="You are perfect"
-         }
-
-         else if(bmi > 24.9){
-            massage.innerHTML="Please lose your weight"
-         }
-
-         else if(bmi < 18.5){
-            massage.innerHTML="Please increase your weight"
-         }
-
-     }
-
-
-   
-
-})
-
-function reload(){
-    window.location.reload();
-}
+document.querySelector(".clear").addEventListener("click", function () {
+  document.querySelector(".height").value = "";
+  document.querySelector(".weight").value = "";
+  document.querySelector(".result").textContent = "";
+  document.querySelector(".massage").textContent = "";
+  document.querySelector(".height_error").textContent = "";
+  document.querySelector(".weight_error").textContent = "";
+});
