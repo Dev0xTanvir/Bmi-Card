@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Your BMI</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="bmi_body">
-        
-        <form>
-        <h2>Test your BMI</h2>
-         <label for="text">Enter your height</label>
-         <input class="height" type="number" placeholder="Height">
-         <p class="height_error"></p>
-         <label for="text">Enter your weight</label>
-         <input class="weight" type="number" placeholder="Weight">
-         <p class="weight_error"></p>
-         <button type="button" class="test">Test</button>
-         <button onclick="reload()" type="button" class="clear">clear</button>
-         <h3 class="result"></h3>
-        <p class="massage"></p>
-        </form>
-    </div>
+  <div class="bmi_body">
+    <form>
+      <h2>Test your BMI</h2>
+      
+      <label for="height">Enter your height (cm)</label>
+      <input id="height" class="height" type="number" placeholder="Height in cm">
+      <p class="height_error"></p>
+      
+      <label for="weight">Enter your weight (kg)</label>
+      <input id="weight" class="weight" type="number" placeholder="Weight in kg">
+      <p class="weight_error"></p>
+      
+      <button type="button" class="test">Test</button>
+      <button type="button" class="clear">Clear</button>
+      
+      <h3 class="result"></h3>
+      <p class="massage"></p>
+    </form>
+  </div>
 
-
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,77 +1,93 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+  }
 
-a{
-    display: inline-block;
-    text-decoration: none;
-}
-
-/* ================================== */
-
-.bmi_body {
-    width: 370px;
-    height: 280px;
-    padding: 25px 35px;
-    background: #EEEDDE;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
+  /* ----------------------------- */
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .bmi_body {
+    background-color: white;
+    padding: 30px 40px;
     border-radius: 10px;
-}
-
-.bmi_body form h2 {
-    margin: 15px 0;
-}
-
-.bmi_body form label{
-    font-size: 12px;
-    font-weight: 300;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(75, 73, 73);
-}
-
-.bmi_body form input {
-    margin: 3px 12px 10px 12px;
-    padding: 5px 0px 5px 0;
-    outline: 0;
-    box-sizing: border-box;
-    border: 1px solid black;
-}
-
-.bmi_body form button {
-    padding: 5px 10px;
-    background: rgb(135, 235, 143);
-    color: white;
-    border: none;
-    outline: 0;
-    font-size: 13px;
-    font-weight: 300;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    margin-top: 10px;
-}
-
-.bmi_body form .clear{
-    margin-left: 10px;
-}
-
-.bmi_body form h3 {
-    margin: 10px 0;
-    font-size: 20px;
-    font-family: sans-serif;
-    font-weight: 400;
-}
-
-.bmi_body form .massage {
-    color: rgb(135, 235, 143);
-    font-size: 20px;
-    font-weight: 400;
-    font-family: sans-serif;
-}
-
-.bmi_body form .weight_error{
-    margin-top: 2px;
-}
+  }
+  
+  .height_error,
+  .weight_error {
+    color: red;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    width: 48%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4f46e5;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #4338ca;
+  }
+  
+  button.clear {
+    background-color: #9ca3af;
+  }
+  
+  button.clear:hover {
+    background-color: #6b7280;
+  }
+  
+  .result {
+    text-align: center;
+    margin-top: 20px;
+    color: #111827;
+    font-size: 1.2rem;
+  }
+  
+  .massage {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #2563eb;
+  }
+  
